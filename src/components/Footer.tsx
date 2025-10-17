@@ -62,7 +62,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-start justify-center md:justify-start gap-3 text-white/70">
                   <MapPin className="w-4 h-4 md:w-5 md:h-5 text-orange-400 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm md:text-base text-center md:text-left" style={{fontFamily: 'Poppins, sans-serif'}}>San Francisco, CA<br />United States</span>
+                  <span className="text-sm md:text-base text-center md:text-left" style={{fontFamily: 'Poppins, sans-serif'}}>IIIT Kottayam<br />Kerala, India</span>
                 </li>
               </ul>
             </div>
