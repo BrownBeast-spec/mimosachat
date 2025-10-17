@@ -109,7 +109,7 @@ const Header = () => {
               <ShinyText
                 text="Mimosa"
                 disabled={false}
-                speed={3}
+                speed={4}
                 className="custom-class"
               />
             </span>

@@ -10,8 +10,8 @@
   background-clip: text;
   color: transparent;
   display: inline-block;
-  font-weight: 800; /* Stronger text for better shine */
-  font-size: inherit; /* Keep original size */
+  font-weight: 700; /* Stronger text for better shine */
+  font-size: 1.5rem; /* Keep original size */
   letter-spacing: 0.5px; /* Slight spacing for clarity */
   animation: shine 3s ease-in-out infinite;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* subtle glow */
