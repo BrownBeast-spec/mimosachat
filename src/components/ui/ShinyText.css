@@ -1,0 +1,32 @@
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  font-weight: 800; /* Stronger text for better shine */
+  font-size: inherit; /* Keep original size */
+  letter-spacing: 0.5px; /* Slight spacing for clarity */
+  animation: shine 3s ease-in-out infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2); /* subtle glow */
+}
+
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shiny-text.disabled {
+  animation: none;
+}
