@@ -32,7 +32,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4 md:px-6 animate-fade-in">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold text-white mb-6 md:mb-8 tracking-tight leading-tight">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[12rem] font-bold text-white/90 mb-6 md:mb-8 tracking-tight leading-tight">
           Match your<br />lifestyle
         </h1>
         
