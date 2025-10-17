@@ -57,6 +57,7 @@ const Header = () => {
                     ? "text-foreground/80 hover:text-foreground"
                     : "text-white/90 hover:text-white"
                 }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Home
                 <span
@@ -72,6 +73,7 @@ const Header = () => {
                     ? "text-foreground/80 hover:text-foreground"
                     : "text-white/90 hover:text-white"
                 }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Mobile
                 <span
@@ -87,6 +89,7 @@ const Header = () => {
                     ? "text-foreground/80 hover:text-foreground"
                     : "text-white/90 hover:text-white"
                 }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
               >
                 Features
                 <span
@@ -155,6 +158,7 @@ const Header = () => {
                     ? "text-foreground/80 hover:text-foreground"
                     : "text-white/90 hover:text-white"
                 }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
@@ -166,6 +170,7 @@ const Header = () => {
                     ? "text-foreground/80 hover:text-foreground"
                     : "text-white/90 hover:text-white"
                 }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Mobile
@@ -177,6 +182,7 @@ const Header = () => {
                     ? "text-foreground/80 hover:text-foreground"
                     : "text-white/90 hover:text-white"
                 }`}
+                style={{ fontFamily: "Poppins, sans-serif" }}
                 onClick={() => setIsMenuOpen(false)}
               >
                 Features
