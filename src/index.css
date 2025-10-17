@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+
+    --primary: 349 89% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 262 83% 68%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 214 100% 59%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 349 89% 70%;
+
+    --radius: 1.25rem;
+    
+    /* Custom design tokens */
+    --hero-overlay: 0 0% 10%;
+    --blush-gradient-start: 0 100% 98%;
+    --blush-gradient-end: 350 100% 95%;
+    
+    /* Shadows */
+    --shadow-soft: 0 10px 30px -10px hsl(349 89% 70% / 0.2);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
+    --shadow-elevated: 0 20px 60px -15px hsl(0 0% 0% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 349 89% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 262 83% 68%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 214 100% 59%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 349 89% 70%;
+    
+    --hero-overlay: 0 0% 5%;
+    --shadow-soft: 0 10px 30px -10px hsl(349 89% 70% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-elevated: 0 20px 60px -15px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-blush {
+    background: linear-gradient(135deg, hsl(var(--blush-gradient-start)), hsl(var(--blush-gradient-end)));
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(to bottom, hsl(var(--hero-overlay) / 0.5), hsl(var(--hero-overlay) / 0.7));
+  }
+  
+  /* Glassmorphism styles */
+  .glass-nav {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .glass-logo {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  
+  .glass-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  /* Mobile-first responsive utilities */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .min-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile-specific scrolling */
+  .scroll-smooth-mobile {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+  }
+  
+  /* Mobile-specific transitions */
+  .transition-touch {
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Improved button states for mobile */
+  .btn-mobile {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .btn-mobile:active {
+    transform: scale(0.95);
+  }
+  
+  /* Mobile-specific text sizing */
+  .text-mobile-base {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Safe area utilities for mobile devices with notches */
+  .safe-top {
+    padding-top: env(safe-area-inset-top);
+  }
+  
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  .safe-left {
+    padding-left: env(safe-area-inset-left);
+  }
+  
+  .safe-right {
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  /* Hide scrollbars but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
