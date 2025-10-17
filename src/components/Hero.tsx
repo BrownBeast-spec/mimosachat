@@ -1,6 +1,7 @@
 import { Heart, X, Instagram, BadgeCheck } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { color } from "motion/react";
 
 const Hero = () => {
   const isMobile = useIsMobile();
@@ -31,8 +32,9 @@ const Hero = () => {
       )}
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center px-4 md:px-6 animate-fade-in">
-        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[12rem] font-bold text-white/90 mb-6 md:mb-8 tracking-tight leading-tight">
+      <div className="relative z-10 text-center px-4 md:px-6 animate-fade-in"
+      >
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold text-white/90 mb-6 md:mb-8 tracking-tight leading-tight">
           Match your<br />lifestyle
         </h1>
         
