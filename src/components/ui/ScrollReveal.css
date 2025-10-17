@@ -1,0 +1,19 @@
+.scroll-reveal {
+  margin: 20px 0;
+  contain: layout style;
+}
+
+.scroll-reveal-text {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  line-height: 1.5;
+  font-weight: 600;
+  display: block;
+  contain: layout style;
+}
+
+.word {
+  display: inline-block;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: layout style paint;
+}

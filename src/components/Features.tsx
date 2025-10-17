@@ -2,6 +2,7 @@ import { BadgeCheck, Zap, Star, MapPin } from "lucide-react";
 import profileBella from "@/assets/profile-bella.jpg";
 import profileCarlos from "@/assets/profile-carlos.jpg";
 import { useIsMobile } from "@/hooks/use-mobile";
+import ScrollReveal from "./ui/ScrollReveal";
 
 const Features = () => {
   const isMobile = useIsMobile();
@@ -13,13 +14,32 @@ const Features = () => {
           <p className="text-sm font-semibold text-muted-foreground tracking-widest uppercase mb-4">
             Match Your Lifestyle
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+          <ScrollReveal
+            baseOpacity={0}
+            enableBlur={true}
+            baseRotation={4}
+            blurStrength={8}
+            containerClassName="mb-6"
+            textClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground"
+            element="h2"
+            stagger={0.04}
+            wordAnimationEnd="bottom top"
+          >
             Smart Match Feed
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            Personalized feed based on your lifestyle & preferences. The more you use Mimosa, the smarter it gets! 
-            Matching people based on just looks is now a thing of the past! Mimosa matches people with similar lifestyles...
-          </p>
+          </ScrollReveal>
+          <ScrollReveal
+            baseOpacity={0.15}
+            enableBlur={true}
+            baseRotation={2}
+            blurStrength={4}
+            containerClassName=""
+            textClassName="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4"
+            element="p"
+            stagger={0.02}
+            wordAnimationEnd="bottom top"
+          >
+            Personalized feed based on your lifestyle & preferences. The more you use Mimosa, the smarter it gets! Matching people based on just looks is now a thing of the past! Mimosa matches people with similar lifestyles...
+          </ScrollReveal>
         </div>
 
         {isMobile ? (

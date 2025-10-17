@@ -1,4 +1,5 @@
 import { Heart, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import ScrollReveal from "./ui/ScrollReveal";
 
 const Footer = () => {
   return (
@@ -19,9 +20,19 @@ const Footer = () => {
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-white" style={{fontFamily: 'Poppins, sans-serif'}}>Mimosa</h3>
               </div>
-              <p className="text-white/70 text-base md:text-lg leading-relaxed mb-4 md:mb-6 max-w-md mx-auto md:mx-0" style={{fontFamily: 'Poppins, sans-serif'}}>
+              <ScrollReveal
+                baseOpacity={0.2}
+                enableBlur={true}
+                baseRotation={1}
+                blurStrength={3}
+                containerClassName="mb-4 md:mb-6"
+                textClassName="text-white/70 text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0"
+                element="p"
+                stagger={0.015}
+                wordAnimationEnd="bottom center"
+              >
                 Smart lifestyle-based dating app. Match with people who share your interests, favorite places, and lifestyle preferences. More than just looks.
-              </p>
+              </ScrollReveal>
               
               {/* Social Links */}
               <div className="flex justify-center md:justify-start gap-4">

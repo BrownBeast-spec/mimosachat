@@ -104,7 +104,7 @@ const Header = () => {
           {/* Center Logo */}
           <div className={isMobile ? "" : "absolute left-1/2 -translate-x-1/2"}>
             <span
-              className={`font-bold text-lg md:text-xl transition-colors duration-300 ${
+              className={`font-bold text-xl md:text-2xl lg:text-3xl transition-colors duration-300 ${
                 isScrolled ? "text-foreground" : "text-white"
               }`}
               style={{ fontFamily: "Poppins, sans-serif" }}
